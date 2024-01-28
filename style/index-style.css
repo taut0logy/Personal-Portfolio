@@ -52,6 +52,48 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
+@keyframes fadeInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .main {
     margin-bottom: 4.5rem;
@@ -61,6 +103,7 @@ body::-webkit-scrollbar-thumb {
     bottom: 0;
     width: 100vw;
     height: 4rem;
+    animation: fadeInFromBottom .75s ease-in-out 0.2s forwards;
   }
 
   #logo {
@@ -81,6 +124,15 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
   }
 
+  .nav-link object {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-link object:active {
+    transform: scale(0.9);
+  }
+
   main {
     margin: 0;
   }
@@ -95,6 +147,7 @@ body::-webkit-scrollbar-thumb {
     top: 0;
     width: 5rem;
     height: 100vh;
+    animation: fadeInFromLeft .75s ease-in-out 0.2s forwards;
   }
 
   .nav-item {
@@ -103,7 +156,9 @@ body::-webkit-scrollbar-thumb {
 
   .nav-link {
     height: 5rem;
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: flex-start;
+    padding-left: 20px;
   }
 
   .navbar-list {
@@ -115,10 +170,10 @@ body::-webkit-scrollbar-thumb {
     transition: width 200ms ease-in-out;
   }
 
-  .navbar:hover .nav-link {
+  /* .navbar:hover .nav-link {
     justify-content: flex-start;
     padding-left: 1.5rem;
-  }
+  } */
 
   .navbar:hover .nav-link-text {
     display: block;
@@ -146,6 +201,7 @@ body::-webkit-scrollbar-thumb {
   z-index: 1000;
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  opacity: 0;
 }
 
 .navbar-list {
@@ -168,8 +224,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav-link object {
-  min-width: 2rem;
-  max-width: 40px;
+  width: 40px;
+  height: 40px;
   justify-content: center;
   transition: all 0.2s ease-in-out;
 }
@@ -202,5 +258,117 @@ body::-webkit-scrollbar-thumb {
 #logo img {
   transform: rotateY(0deg);
   transition: transform 0.2s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.header-title {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+  opacity: 0;
+  animation: fadeInFromTop .75s ease-in-out 0.2s forwards;
+}
+
+#about-me {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* .profile-pic-container {
+  width: 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+} */
+
+.about-me-image {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  display: grid;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInFromLeft .75s ease-in-out 0.2s forwards;
+}
+
+.about-me-image img {
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  object-position: center;
+  border-color:white;
+  border-style: solid;
+  border-width: .25rem;
+  border-radius: 50%;
+}
+
+.about-me-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  z-index: -1;
+}
+
+
+
+.about-me-text {
+  font-family: 'Courier New', Courier, monospace;
+  opacity: 0;
+  animation: fadeInFromRight .75s ease-in-out 0.2s forwards;
+  padding-left: 2rem;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hi {
+  font-size: 5.5rem;
+  font-weight: bold;
+  /* background: linear-gradient(to right, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  padding-top: 2rem;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+
+}
+
+.my-name {
+  font-size: 3.5rem;
+  font-weight: bold;
+  /* background: linear-gradient(to right, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  
+}
+
+.about-me-text p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
