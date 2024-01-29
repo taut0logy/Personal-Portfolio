@@ -40,48 +40,44 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
-            <object data="icons/profile.svg" type="image/svg+xml"></object>
+          <a href="#about-me" class="nav-link">
+            <img src="/icons/profile.svg" alt="Profile" />
             <span class="nav-link-text">About me</span>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
-            <object data="icons/skills.svg" type="image/svg+xml"></object>
+          <a href="#my-skills" class="nav-link">
+            <img src="/icons/skills.svg" alt="Skills" />
             <span class="nav-link-text">My skills</span>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
-            <object data="icons/hobbies.svg" type="image/svg+xml"></object>
+          <a href="#my-hobbies" class="nav-link">
+            <img src="/icons/hobbies.svg" alt="Hobbies" />
             <span class="nav-link-text">My Hobbies</span>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
-            <object data="icons/work.svg" type="image/svg+xml"></object>
+          <a href="#my-work" class="nav-link">
+            <img src="/icons/work.svg" alt="Work" />
             <span class="nav-link-text">My work</span>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
-            <object data="icons/achievement.svg" type="image/svg+xml"></object>
+          <a href="#my-achievements" class="nav-link">
+            <img src="/icons/achievement.svg" alt="Achievement" />
             <span class="nav-link-text">My achievements</span>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
-            <object data="icons/contact.svg" type="image/svg+xml"></object>
+          <a href="#contact-me" class="nav-link">
+            <img src="/icons/contact.svg" alt="Contact" />
             <span class="nav-link-text">Contact me</span>
           </a>
         </li>
         <li class="nav-item" id="theme-toggle">
           <a class="nav-link">
-            <object
-              id="theme-icon"
-              data="icons/light.svg"
-              type="image/svg+xml"
-            ></object>
+            <img src="/icons/light.svg" alt="Theme" id="theme-icon" />
             <span class="nav-link-text">Theme</span>
           </a>
         </li>
@@ -104,20 +100,63 @@
           </div>
         </div>
         <div class="about-me-text">
-          <span class="hi">Hi!</span>
+          <div class="hi">Hi!</div>
           <h2 class="my-name">I'm Raufun Ahsan</h2>
-          <p>
-            I'm a web developer and aspiring software engineer.<br> I'm currently
+          <p class="hi-p">
+            I'm a web developer and aspiring software engineer. I'm currently
             studying Computer Science and Engineering at the Khulna University
-            of Engineering & Technology.<br> I'm also a competitive programmer and a
-            problem solver.<br>I'm a fast learner and I love to learn new things. <br>I
+            of Engineering & Technology. I'm also a competitive programmer and a
+            problem solver.I'm a fast learner and I love to learn new things. I
             love solving problems, playing games, watching movies and listening
             to music.
           </p>
         </div>
       </section>
 
-      <section id="my-skills"></section>
+      <section id="my-skills">
+        <div class="my-skills-text">
+          <h2 class="section-title">My Skills</h2>
+          <div class="skill-list">
+              <ul class="accordition-list">
+                <li class="accordition-item">
+                  <input type="radio" name="accordition" id="item1" checked/>
+                  <label for="item1"><img class="list-icon" src="image/wolf.jpg" alt=""> Languages</label>
+                  <div class="list-content">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laudantium quasi reiciendis repudiandae sint excepturi recusandae maiores quas illo voluptatibus corporis, accusantium nostrum beatae dicta libero odit totam esse similique. </p>
+                  </div>
+                </li>
+                <li class="accordition-item">
+                  <input type="radio" name="accordition" id="item2" />
+                  <label for="item2"><img class="list-icon" src="image/wolf.jpg" alt=""> Languages</label>
+                  <div class="list-content">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laudantium quasi reiciendis repudiandae sint excepturi recusandae maiores quas illo voluptatibus corporis, accusantium nostrum beatae dicta libero odit totam esse similique. </p>
+                  </div>
+                </li>
+                <li class="accordition-item">
+                  <input type="radio" name="accordition" id="item3" />
+                  <label for="item3"><img class="list-icon" src="image/wolf.jpg" alt=""> Languages</label>
+                  <div class="list-content">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laudantium quasi reiciendis repudiandae sint excepturi recusandae maiores quas illo voluptatibus corporis, accusantium nostrum beatae dicta libero odit totam esse similique. </p>
+                  </div>
+                </li>
+                <li class="accordition-item">
+                  <input type="radio" name="accordition" id="item4" />
+                  <label for="item4"><img class="list-icon" src="image/wolf.jpg" alt=""> Languages</label>
+                  <div class="list-content">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laudantium quasi reiciendis repudiandae sint excepturi recusandae maiores quas illo voluptatibus corporis, accusantium nostrum beatae dicta libero odit totam esse similique. </p>
+                  </div>
+                </li>
+
+              </ul>
+
+          </div>
+        </div>
+        <div class="my-skills-image">
+          <img src="/image/skills.jpg" alt="My Skills" id="my-skills-image" />
+        </div>
+      </section>
+
+      <section id="my-hobbies"></section>
 
       <section id="my-work"></section>
 
@@ -126,5 +165,6 @@
       <section id="contact-me"></section>
     </main>
     <script src="/script/index-script.js" async defer></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   </body>
 </html>
